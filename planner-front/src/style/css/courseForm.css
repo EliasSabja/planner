@@ -1,0 +1,57 @@
+.courseFormContainer
+{
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 60%;
+    height: 80%;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+.courseForm 
+{
+    display: inline-block;
+    width: 500px;
+    height: 350px;
+    position: relative;
+    text-align: left;
+}
+
+.inputField
+{
+    margin-bottom: 12px;
+}
+
+.courseForm label
+{
+    font-size: 24px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.courseForm input
+{
+    border-radius: 8px;
+    border-color: transparent;
+    width: 100%;
+    font-size: 20px;
+}
+
+.buttonContainer
+{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.courseFormContainer button
+{
+    width: 50%;
+    border-radius: 8px;
+    font-size: 24px;
+    background: black;
+    color: white;
+}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import Form from './components/Form';
+import CourseForm from './components/CourseForm';
 import PlannerView from './components/PlannerView';
-
+import './style/css/mainPage.css';
 
 export interface course {
   courseName: string;
@@ -24,7 +24,7 @@ const App = (): JSX.Element => {
 
   return (
     <div className="App">
-      <Form onSubmitForm={newCourse}/>
+      <CourseForm onSubmitForm={newCourse}/>
       <PlannerView />
     </div>
   );
