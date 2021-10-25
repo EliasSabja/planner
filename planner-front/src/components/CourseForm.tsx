@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { course } from '../App';
+import { Course } from '../App';
 import '../style/css/courseForm.css';
 
-interface PropsInterface {
-    onSubmitForm: (data: course) => void;
+interface courseData {
+    onSubmitForm: (data: Course) => void;
 };
 
-const CourseForm = (props : PropsInterface) => {
+const CourseForm = (props : courseData) => {
     
-    const[dataInput, setdataInput] = useState<course>({courseName: '', courseCode: '', requisites: '', semester: '', credits: 0, color: ''}
+    const[dataInput, setdataInput] = useState<Course>({courseName: '', courseCode: '', requisites: '', semester: '', credits: 0, color: ''}
     );
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {

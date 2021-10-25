@@ -3,7 +3,7 @@ import CourseForm from './components/CourseForm';
 import PlannerView from './components/PlannerView';
 import './style/css/mainPage.css';
 
-export interface course {
+export interface Course {
   courseName: string;
   courseCode: string;
   requisites: string;
@@ -14,18 +14,19 @@ export interface course {
 
 const App = (): JSX.Element => {
 
-  const[courseData, setCourseData] = useState<course[]>([]);
+  const[courses, setCourses] = useState<Course[]>([]);
 
-  const newCourse = (data: course) : void => {
-    console.log("Datos recibidos:", data);
+  const newCourse = (data: Course) : void => {
+    let coursesTemp = [...courses];
+    coursesTemp.push(data);
+    setCourses(coursesTemp);
     // Insert to DB
-    
   };
 
   return (
     <div className="App">
       <CourseForm onSubmitForm={newCourse}/>
-      <PlannerView />
+      <PlannerView coursesList={courses}/>
     </div>
   );
 }
